@@ -1,0 +1,44 @@
+
+.form-group {
+	position: relative;
+}
+
+.form-keeper.form-keeper--error {
+	border-color:red;
+}
+
+.form-keeper.form-keeper--success {
+	border-color:green;
+}
+
+.form-keeper__popover {
+	display: block;
+	position: absolute;
+	max-width: 100%;
+	bottom: 44px;
+	top: auto;
+	background:red;
+	border:0;
+}
+
+.form-keeper__popover p {
+	margin: 5px 10px;
+	color:white;
+	font-size: 12px;
+}
+
+.form-keeper__popover a {
+	color:white;
+	font-size: 12px;
+	text-decoration: underline;
+	cursor: pointer;
+	font-weight: bold;
+}
+
+.form-keeper__popover.top .arrow:after {
+	border-top-color:red;
+}
+
+.form-keeper__checkbox--group .form-keeper__popover {
+	bottom:70px;
+}

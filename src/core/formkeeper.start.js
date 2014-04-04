@@ -1,0 +1,3 @@
+var FormKeeper = FormKeeper || {};
+
+FormKeeper.$ = $;
