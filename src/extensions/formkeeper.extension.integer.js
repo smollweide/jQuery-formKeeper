@@ -1,5 +1,5 @@
 /*
- * FormKeeper.Extension.Length
+ * FormKeeper.Extension.Integer
  *
  * Copyright 2014
  * Released under the MIT license
@@ -18,18 +18,18 @@
 
 	/**
 	 *
-	 * @Class Length
+	 * @Class Integer
 	 * @extend FormKeeper
 	 *
 	 * @type {*}
 	 */
-	FormKeeper.Extension.Length = Class.extend({
+	FormKeeper.Extension.Integer = Class.extend({
 
 		errorMessage: {
-			exactly: 'The value must be {{exactly}} characters long.',
-			max: 'The value you entered is too long. The value can be up to {{max}} characters long.',
-			min: 'The value you entered is too short. The value must be at least {{min}} characters long.',
-			range: 'The must be between {{min}} and {{max}} characters long.'
+			integer: 'The value you entered must be an Integer.',
+			max: 'The value you entered is too high. The value can be up to {{max}}.',
+			min: 'The value you entered is too low. The value must be higher than {{min}}.',
+			range: 'The value must be between {{min}} and {{max}}.'
 		},
 
 		/**
@@ -54,13 +54,12 @@
 		 */
 		validateSelector: function ($input) {
 			var self = this,
+				data = $input.data('form-keeper').integer,
 				isInput = (self.utils.isTagName($input, 'input')),
-				isTextArea = (self.utils.isTagName($input, 'textarea')),
-				data = $input.data('form-keeper').length
-			;
+				isTextArea = (self.utils.isTagName($input, 'textarea'));
 
 			if (!isInput && !isTextArea) {
-				self.utils.console('warn', 'FormKeeper.Email.lengthSelector: ' +
+				self.utils.console('warn', 'FormKeeper.Extension.Integer.validateSelector: ' +
 					'the selector must be an input or textarea tag');
 				return true;
 			}
@@ -74,51 +73,52 @@
 		 *
 		 * @param {string} value
 		 * @param {object} data
-		 * @param {string} data.exactly
-		 * @param {string} data.min
-		 * @param {string} data.max
 		 * @returns {{valid: boolean}}
 		 */
 		validate: function (value, data) {
 			var self = this,
-				length = value.length,
-				isExactly = !self.utils.isUndefined(data.exactly),
-				isMin = !self.utils.isUndefined(data.min),
-				isMax = !self.utils.isUndefined(data.max),
+				valueInt,
 				returnTrue = {
 					valid: true
 				},
 				returnFalse = function (key) {
+					if (self.utils.isUndefined(key)) {
+						return {
+							valid: false
+						};
+					}
 					return {
 						type: key,
 						valid: false
 					};
-				};
+				},
+				isMin = (!self.utils.isUndefined(data.min)),
+				isMax = (!self.utils.isUndefined(data.max)),
+				isMandatory = (self.utils.isMandatoryCase(value)),
+				isInValid = (self.utils.isFunction(value) ||
+					self.utils.isObject(value) ||
+					self.utils.isArray(value))
+			;
 
-			if (self.utils.isMandatoryCase(value)) {
+			if (isMandatory) {
 				return returnTrue;
 			}
 
-			if (!self.utils.isString(value)) {
-				return returnTrue;
+			if (isInValid) {
+				return returnFalse('integer');
 			}
 
-			if (length < 1) {
-				return returnTrue;
-			}
+			value = value.toString();
 
-			// exactly
-			if (isExactly) {
-				if (length === data.exactly) {
-					return returnTrue;
-				} else {
-					return returnFalse('exactly');
-				}
+			// integer
+			if (value.replace(/[0-9\-]*/g, '') !== '') {
+				return returnFalse('integer');
 			}
+			valueInt = parseInt(value, 10);
 
 			// range
 			if (isMin && isMax) {
-				if (length >= data.min && length <= data.max) {
+				if (valueInt >= data.min && valueInt <= data.max) {
 					return returnTrue;
 				} else {
 					return returnFalse('range');
@@ -127,7 +127,7 @@
 
 			// min
 			if (isMin) {
-				if (length >= data.min) {
+				if (valueInt >= data.min) {
 					return returnTrue;
 				} else {
 					return returnFalse('min');
@@ -136,7 +136,7 @@
 
 			// max
 			if (isMax) {
-				if (length <= data.max) {
+				if (valueInt <= data.max) {
 					return returnTrue;
 				} else {
 					return returnFalse('max');
@@ -145,6 +145,7 @@
 
 			return returnTrue;
 		}
+
 	});
 
 })(FormKeeper.$);
