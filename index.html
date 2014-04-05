@@ -115,7 +115,7 @@
 				</form>
 			</section>
 
-			<!-- Length -->
+			<!-- Integer -->
 			<section class="box">
 				<h1 class="box__header">Integer Validation</h1>
 				<form role="form" class="from form-horizontal box__inner">
@@ -163,6 +163,55 @@
 					</div>
 				</form>
 			</section>
+
+			<!-- Number -->
+			<section class="box">
+				<h1 class="box__header">Number Validation</h1>
+				<form role="form" class="from form-horizontal box__inner">
+					<div class="form-group">
+						<label class="control-label col-sm-3" for="inputNumber1">Number *</label>
+						<div class="col-sm-9 has-feedback">
+							<input id="inputNumber1" class="form-control form-keeper" data-form-keeper='{"mandatory":{}, "number":{}}' />
+							<span class="glyphicon glyphicon-ok form-control-feedback icon-success"></span>
+							<span class="glyphicon glyphicon-remove form-control-feedback icon-error"></span>
+							<small>{"mandatory":{}, "number":{}}</small>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-3" for="inputNumber2">Min *</label>
+						<div class="col-sm-9 has-feedback">
+							<input id="inputNumber2" class="form-control form-keeper" data-form-keeper='{"mandatory":{}, "number":{"min": 10}}' />
+							<span class="glyphicon glyphicon-ok form-control-feedback icon-success"></span>
+							<span class="glyphicon glyphicon-remove form-control-feedback icon-error"></span>
+							<small>{"mandatory":{}, "number":{"min": 10}}</small>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-3" for="inputNumber3">Max *</label>
+						<div class="col-sm-9 has-feedback">
+							<input id="inputNumber3" class="form-control form-keeper" data-form-keeper='{"mandatory":{}, "number":{"max": 10}}' />
+							<span class="glyphicon glyphicon-ok form-control-feedback icon-success"></span>
+							<span class="glyphicon glyphicon-remove form-control-feedback icon-error"></span>
+							<small>{"mandatory":{}, "number":{"max": 10}}</small>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-3" for="inputNumber4">Range *</label>
+						<div class="col-sm-9 has-feedback">
+							<input id="inputNumber4" class="form-control form-keeper" data-form-keeper='{"mandatory":{}, "number":{"min": 10, "max": 20}}' />
+							<span class="glyphicon glyphicon-ok form-control-feedback icon-success"></span>
+							<span class="glyphicon glyphicon-remove form-control-feedback icon-error"></span>
+							<small>"mandatory":{}, "number":{"min": 10, "max": 20}}</small>
+						</div>
+					</div>
+					<div class="form-group form-group--submit">
+						<div class="col-sm-3">&nbsp;</div>
+						<div class="col-sm-9">
+							<button type="submit" class="btn btn-success">Validate</button>
+						</div>
+					</div>
+				</form>
+			</section>
 		</div>
 	</div>
 
@@ -186,6 +235,7 @@
 <script src="src/extensions/formkeeper.extension.email.js"></script>
 <script src="src/extensions/formkeeper.extension.length.js"></script>
 <script src="src/extensions/formkeeper.extension.integer.js"></script>
+<script src="src/extensions/formkeeper.extension.number.js"></script>
 
 <!-- project -->
 <script src="src/project/script.js"></script>
