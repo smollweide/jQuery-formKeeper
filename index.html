@@ -212,6 +212,64 @@
 					</div>
 				</form>
 			</section>
+
+			<!-- Date -->
+			<section class="box">
+				<h1 class="box__header">Date Validation</h1>
+				<form role="form" class="from form-horizontal box__inner">
+					<div class="form-group">
+						<label class="control-label col-sm-3" for="inputDate1">Date *</label>
+						<div class="col-sm-9 has-feedback">
+							<input id="inputDate1" class="form-control form-keeper" data-form-keeper='{"mandatory":{}, "date":{}}' />
+							<span class="glyphicon glyphicon-ok form-control-feedback icon-success"></span>
+							<span class="glyphicon glyphicon-remove form-control-feedback icon-error"></span>
+							<small>{"mandatory":{}, "date":{}}</small>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-3" for="inputDate2">Date Format *</label>
+						<div class="col-sm-9 has-feedback">
+							<input id="inputDate2" class="form-control form-keeper" data-form-keeper='{"mandatory":{}, "date":{"format":"YYYY.MM.DD"}}' />
+							<span class="glyphicon glyphicon-ok form-control-feedback icon-success"></span>
+							<span class="glyphicon glyphicon-remove form-control-feedback icon-error"></span>
+							<small>{"mandatory":{}, "date":{"format":"YYYY.MM.DD"}}</small>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-3" for="inputDate3">Date Format *</label>
+						<div class="col-sm-9 has-feedback">
+							<input id="inputDate3" class="form-control form-keeper" data-form-keeper='{"mandatory":{}, "date":{"format":"D.M.YYYY"}}' />
+							<span class="glyphicon glyphicon-ok form-control-feedback icon-success"></span>
+							<span class="glyphicon glyphicon-remove form-control-feedback icon-error"></span>
+							<small>{"mandatory":{}, "date":{"format":"D.M.YYYY"}}</small>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-3" for="inputDate4">Date Separator *</label>
+						<div class="col-sm-9 has-feedback">
+							<input id="inputDate4" class="form-control form-keeper" data-form-keeper='{"mandatory":{}, "date":{"format":"YYYY-MM-DD", "separator": "-"}}' />
+							<span class="glyphicon glyphicon-ok form-control-feedback icon-success"></span>
+							<span class="glyphicon glyphicon-remove form-control-feedback icon-error"></span>
+							<small>{"mandatory":{}, "date":{"format":"YYYY-MM-DD", "separator": "-"}}</small>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-3" for="inputDate5">Date Suggestion *</label>
+						<div class="col-sm-9 has-feedback">
+							<input id="inputDate5" value="30.02.2014" class="form-control form-keeper" data-form-keeper='{"mandatory":{}, "date":{}}' />
+							<span class="glyphicon glyphicon-ok form-control-feedback icon-success"></span>
+							<span class="glyphicon glyphicon-remove form-control-feedback icon-error"></span>
+							<small>{"mandatory":{}, "date":{}}</small>
+						</div>
+					</div>
+					<div class="form-group form-group--submit">
+						<div class="col-sm-3">&nbsp;</div>
+						<div class="col-sm-9">
+							<button type="submit" class="btn btn-success">Validate</button>
+						</div>
+					</div>
+				</form>
+			</section>
 		</div>
 	</div>
 
@@ -236,6 +294,7 @@
 <script src="src/extensions/formkeeper.extension.length.js"></script>
 <script src="src/extensions/formkeeper.extension.integer.js"></script>
 <script src="src/extensions/formkeeper.extension.number.js"></script>
+<script src="src/extensions/formkeeper.extension.date.js"></script>
 
 <!-- project -->
 <script src="src/project/script.js"></script>
