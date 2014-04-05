@@ -1,4 +1,18 @@
-
+/*
+ * FormKeeper.Extension.Email
+ *
+ * Copyright 2014
+ * Released under the MIT license
+ *
+ * Jquery Plugin / form validation
+ *
+ * @author Simon Mollweide
+ * @namespace FormKeeper.$
+ * @extends FormKeeper.Extension
+ * @require jQuery
+ * @version 0.1.0
+ *
+ */
 (function($) {
 	'use strict';
 
