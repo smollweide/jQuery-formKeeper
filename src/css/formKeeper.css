@@ -3,28 +3,36 @@
 	position: relative;
 }
 
-.form-keeper.form-keeper--error {
-	border-color:red;
+.form-group .has-feedback .form-control-feedback {
+	display:none;
 }
 
-.form-keeper.form-keeper--success {
-	border-color:green;
+.form-group .has-feedback.has-error .form-control-feedback.icon-error {
+	display:block;
+}
+.form-group .has-feedback.has-success .form-control-feedback.icon-success {
+	display:block;
 }
 
 .form-keeper__popover {
 	display: block;
 	position: absolute;
 	max-width: 100%;
-	bottom: 44px;
+	bottom: -19px;
 	top: auto;
-	background:red;
-	border:0;
+	background: #c14c33;
+	border: 0;
+	left: auto;
+	right: 0;
+	margin-right: 11px;
 }
 
 .form-keeper__popover p {
-	margin: 5px 10px;
-	color:white;
+	margin: 2px 5px;
+	color: white;
+	text-shadow:0px -1px 1px #532116;
 	font-size: 12px;
+	font-weight: bold;
 }
 
 .form-keeper__popover a {
@@ -35,8 +43,15 @@
 	font-weight: bold;
 }
 
-.form-keeper__popover.top .arrow:after {
-	border-top-color:red;
+.form-keeper__popover.bottom .arrow {
+	margin-left: -22px;
+	top: -7px;
+	border-width: 0;
+	left: 100%;
+}
+
+.form-keeper__popover.bottom .arrow:after {
+	border-bottom-color:#c14c33;
 }
 
 .form-keeper__checkbox--group .form-keeper__popover {

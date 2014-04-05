@@ -1,0 +1,57 @@
+
+/*
+|-------------------------------
+| Base
+|-------------------------------
+*/
+input, textarea, button, a {
+	outline:0;
+}
+
+/*
+|-------------------------------
+| Box
+|-------------------------------
+*/
+.box {
+	position: relative;
+	border-radius: 3px;
+	margin: 0 0 15px;
+}
+
+.box__header {
+	background-color: #e0e0e0;
+	background-image: -moz-linear-gradient(#fafafa, #e0e0e0);
+	background-image: -webkit-linear-gradient(#fafafa, #e0e0e0);
+	background-image: linear-gradient(#fafafa, #e0e0e0);
+	background-repeat: repeat-x;
+	margin: 0;
+	border-top-left-radius: 1px;
+	border-top-right-radius: 1px;
+	border: 1px solid #d8d8d8;
+	border-bottom: 0;
+	padding: 10px 10px 11px;
+	font-size: 14px;
+	text-shadow: 0 1px 0 #fff;
+}
+
+.box__inner {
+	padding:7.5px 0 0 0;
+	background: #fff;
+	border: 1px solid #d8d8d8;
+	border-top: 1px solid #ccc;
+	border-bottom-left-radius: 1px;
+	border-bottom-right-radius: 1px;
+	color: #666;
+	font-size: 13px;
+}
+
+.form-horizontal .form-group {
+	margin:0;
+	padding: 7.5px 15px;
+}
+
+.form-horizontal .form-group--submit {
+	background:#fafafa;
+	padding:15px;
+}

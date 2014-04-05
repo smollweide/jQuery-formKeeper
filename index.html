@@ -6,11 +6,68 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>jQuery FormKeeper</title>
 
-	<!-- Bootstrap -->
+	<link href="src/css/bootstrap.min.css" rel="stylesheet">
 	<link href="src/css/formKeeper.css" rel="stylesheet">
+	<link href="src/project/style.css" rel="stylesheet">
 </head>
 
 <body>
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<h1 class="page-header">jQuery FormKeeper</h1>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<section class="box">
+				<!-- Mandatory -->
+				<h1 class="box__header">Mandatory Validation</h1>
+				<form role="form" class="from form-horizontal box__inner">
+					<div class="form-group">
+						<label class="control-label col-sm-3" for="inputMandatory1">Mandatory *</label>
+						<div class="col-sm-9 has-feedback">
+							<input id="inputMandatory1" class="form-control form-keeper" data-form-keeper='{"mandatory":{}}' />
+							<span class="glyphicon glyphicon-ok form-control-feedback icon-success"></span>
+							<span class="glyphicon glyphicon-remove form-control-feedback icon-error"></span>
+						</div>
+					</div>
+					<div class="form-group form-group--submit">
+						<div class="col-sm-3">&nbsp;</div>
+						<div class="col-sm-9">
+							<button type="submit" class="btn btn-success">Validate</button>
+						</div>
+					</div>
+				</form>
+			</section>
+
+			<section class="box">
+				<!-- Email -->
+				<h1 class="box__header">Email Validation</h1>
+				<form role="form" class="from form-horizontal box__inner">
+					<div class="form-group">
+						<label class="control-label col-sm-3" for="inputEmail1">Email *</label>
+						<div class="col-sm-9 has-feedback">
+							<input id="inputEmail1" type="email" class="form-control form-keeper" data-form-keeper='{"mandatory":{}, "email":{}}' />
+							<span class="glyphicon glyphicon-ok form-control-feedback icon-success"></span>
+							<span class="glyphicon glyphicon-remove form-control-feedback icon-error"></span>
+						</div>
+					</div>
+					<div class="form-group form-group--submit">
+						<div class="col-sm-3">&nbsp;</div>
+						<div class="col-sm-9">
+							<button type="submit" class="btn btn-success">Validate</button>
+						</div>
+					</div>
+				</form>
+			</section>
+		</div>
+	</div>
+
+
+
+</div>
 
 <!-- base -->
 <script src="//code.jquery.com/jquery-1.10.2.js"></script>
@@ -21,6 +78,14 @@
 <script src="src/core/formkeeper.config.js"></script>
 <script src="src/core/formkeeper.utils.js"></script>
 <script src="src/core/formkeeper.core.js"></script>
+<script src="src/core/jquery.formkeeper.js"></script>
+
+<!-- extensions -->
+<script src="src/extensions/formkeeper.extension.mandatory.js"></script>
+<script src="src/extensions/formkeeper.extension.email.js"></script>
+
+<!-- project -->
+<script src="src/project/script.js"></script>
 
 </body>
 </html>
