@@ -1,0 +1,18 @@
+# .gitignore file
+#
+#
+# 1.) Allow everything in environment folder
+#
+#
+#
+# 2.) Allow all custom extensions with specific exceptions (e.g. generated classes)
+#
+#
+
+# /
+.DS_Store
+.idea/
+/*.sh
+/*.bat
+/node_modules
+/cache
