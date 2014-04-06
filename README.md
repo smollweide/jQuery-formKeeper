@@ -8,8 +8,8 @@ extensions are structured similar to Terrific.js modules.
 Include script *after* the jQuery library (unless you are packaging
 scripts somehow else):
 ```html
-    <script src="/path/to/jquery.formKeeper.core.min.js"></script>
-    <!-- add extensions you need for your project -->
+<script src="/path/to/jquery.formKeeper.core.min.js"></script>
+<!-- add extensions you need for your project -->
 ```
 Do not include the script directly from GitHub
 (http://raw.github.com/...). The file is being served as text/plain and
@@ -20,33 +20,33 @@ as such being blocked in Internet Explorer on Windows 7 for instance
 
 Html Form:
 ```html
-    <form>
-        <input class="form-keeper" data-form-keeper='{"mandatory":{}}' />
-        <button type="submit">Validate</button>
-    </form>
+<form>
+    <input class="form-keeper" data-form-keeper='{"mandatory":{}}' />
+    <button type="submit">Validate</button>
+</form>
 ```
 
 Javascript:
 ```javascript
-    (function (window, $) {
-        $(document).ready(function () {
-            var $form = $(form);
+(function (window, $) {
+    $(document).ready(function () {
+        var $form = $('form');
 
-            $form.formKeeper('typeahead');
-            $form.on('submit', function (event) {
-                event.preventDefault();
+        $form.formKeeper('typeahead');
+        $form.on('submit', function (event) {
+            event.preventDefault();
 
-                $form.formKeeper({
-                    success: function () {
-                        alert('success');
-                    },
-                    error: function () {
-                        alert('error');
-                    }
-                });
+            $form.formKeeper({
+                success: function () {
+                    alert('success');
+                },
+                error: function () {
+                    alert('error');
+                }
             });
         });
-    }(window, jQuery));
+    });
+}(window, jQuery));
 ```
 
 #Mandatory Validation
@@ -54,12 +54,12 @@ Javascript:
 Installation:
 include script *after* "jquery.formKeeper.core.min.js"
 ```html
-    <script src="/path/to/jquery.formKeeper.extension.mandatory.min.js"></script>
+<script src="/path/to/jquery.formKeeper.extension.mandatory.min.js"></script>
 ```
 
 Usage:
 ```html
-    <input class="form-keeper" data-form-keeper='{"mandatory":{}}' />
+<input class="form-keeper" data-form-keeper='{"mandatory":{}}' />
 ```
 
 #Email Validation
@@ -67,12 +67,12 @@ Usage:
 Installation:
 include script *after* "jquery.formKeeper.core.min.js"
 ```html
-    <script src="/path/to/jquery.formKeeper.extension.email.min.js"></script>
+<script src="/path/to/jquery.formKeeper.extension.email.min.js"></script>
 ```
 
 Usage:
 ```html
-    <input class="form-keeper" data-form-keeper='{"email":{}}' />
+<input class="form-keeper" data-form-keeper='{"email":{}}' />
 ```
 
 #Length Validation
@@ -80,12 +80,12 @@ Usage:
 Installation:
 include script *after* "jquery.formKeeper.core.min.js"
 ```html
-    <script src="/path/to/jquery.formKeeper.extension.length.min.js"></script>
+<script src="/path/to/jquery.formKeeper.extension.length.min.js"></script>
 ```
 
 Usage:
 ```html
-    <input class="form-keeper" data-form-keeper='{"length":{"min": 2}}' />
+<input class="form-keeper" data-form-keeper='{"length":{"min": 2}}' />
 ```
 
 Attributes:
@@ -103,12 +103,12 @@ Combinations:
 Installation:
 include script *after* "jquery.formKeeper.core.min.js"
 ```html
-    <script src="/path/to/jquery.formKeeper.extension.integer.min.js"></script>
+<script src="/path/to/jquery.formKeeper.extension.integer.min.js"></script>
 ```
 
 Usage:
 ```html
-    <input class="form-keeper" data-form-keeper='{"integer":{}}' />
+<input class="form-keeper" data-form-keeper='{"integer":{}}' />
 ```
 
 Attributes:
@@ -125,12 +125,12 @@ Combinations:
 Installation:
 include script *after* "jquery.formKeeper.core.min.js"
 ```html
-    <script src="/path/to/jquery.formKeeper.extension.number.min.js"></script>
+<script src="/path/to/jquery.formKeeper.extension.number.min.js"></script>
 ```
 
 Usage:
 ```html
-    <input class="form-keeper" data-form-keeper='{"number":{}}' />
+<input class="form-keeper" data-form-keeper='{"number":{}}' />
 ```
 
 Attributes:
@@ -147,12 +147,12 @@ Combinations:
 Installation:
 include script *after* "jquery.formKeeper.core.min.js"
 ```html
-    <script src="/path/to/jquery.formKeeper.extension.date.min.js"></script>
+<script src="/path/to/jquery.formKeeper.extension.date.min.js"></script>
 ```
 
 Usage:
 ```html
-    <input class="form-keeper" data-form-keeper='{"date":{}}' />
+<input class="form-keeper" data-form-keeper='{"date":{}}' />
 ```
 
 Attributes:
