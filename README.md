@@ -8,7 +8,7 @@ extensions are structured similar to Terrific.js modules.
 Include script *after* the jQuery library (unless you are packaging
 scripts somehow else):
 ```html
-<script src="/path/to/jquery.formKeeper.core.min.js"></script>
+<script src="/path/to/jquery.formkeeper.core.min.js"></script>
 <!-- add extensions you need for your project -->
 ```
 Do not include the script directly from GitHub
@@ -52,9 +52,9 @@ Javascript:
 #Mandatory Validation
 
 Installation:
-include script *after* "jquery.formKeeper.core.min.js"
+include script *after* "jquery.formkeeper.core.min.js"
 ```html
-<script src="/path/to/jquery.formKeeper.extension.mandatory.min.js"></script>
+<script src="/path/to/jquery.formkeeper.extension.mandatory.min.js"></script>
 ```
 
 Usage:
@@ -65,9 +65,9 @@ Usage:
 #Email Validation
 
 Installation:
-include script *after* "jquery.formKeeper.core.min.js"
+include script *after* "jquery.formkeeper.core.min.js"
 ```html
-<script src="/path/to/jquery.formKeeper.extension.email.min.js"></script>
+<script src="/path/to/jquery.formkeeper.extension.email.min.js"></script>
 ```
 
 Usage:
@@ -78,9 +78,9 @@ Usage:
 #Length Validation
 
 Installation:
-include script *after* "jquery.formKeeper.core.min.js"
+include script *after* "jquery.formkeeper.core.min.js"
 ```html
-<script src="/path/to/jquery.formKeeper.extension.length.min.js"></script>
+<script src="/path/to/jquery.formkeeper.extension.length.min.js"></script>
 ```
 
 Usage:
@@ -101,9 +101,9 @@ Combinations:
 #Integer Validation
 
 Installation:
-include script *after* "jquery.formKeeper.core.min.js"
+include script *after* "jquery.formkeeper.core.min.js"
 ```html
-<script src="/path/to/jquery.formKeeper.extension.integer.min.js"></script>
+<script src="/path/to/jquery.formkeeper.extension.integer.min.js"></script>
 ```
 
 Usage:
@@ -123,9 +123,9 @@ Combinations:
 #Number Validation
 
 Installation:
-include script *after* "jquery.formKeeper.core.min.js"
+include script *after* "jquery.formkeeper.core.min.js"
 ```html
-<script src="/path/to/jquery.formKeeper.extension.number.min.js"></script>
+<script src="/path/to/jquery.formkeeper.extension.number.min.js"></script>
 ```
 
 Usage:
@@ -145,9 +145,9 @@ Combinations:
 #Date Validation
 
 Installation:
-include script *after* "jquery.formKeeper.core.min.js"
+include script *after* "jquery.formkeeper.core.min.js"
 ```html
-<script src="/path/to/jquery.formKeeper.extension.date.min.js"></script>
+<script src="/path/to/jquery.formkeeper.extension.date.min.js"></script>
 ```
 
 Usage:
