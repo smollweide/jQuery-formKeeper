@@ -160,5 +160,25 @@ Attributes:
 * format (default: "DD.MM.YYYY")("YYYY.MM.DD", "YYYY.M.D", "DD.MM.YYYY", "D.M.YYYY")
 * separator (default: ".")
 
+#Select Box Validation
+
+Installation:
+include script *after* "jquery.formkeeper.core.min.js"
+```html
+<script src="/path/to/jquery.formkeeper.extension.select.min.js"></script>
+```
+
+Usage:
+```html
+<select class="form-keeper" data-form-keeper='{"select":{}'>
+	<option value="">Please Select ...</option>
+	<option value="1">Item 1</option>
+	<option value="2">Item 2</option>
+</select>
+```
+
+Attributes:
+
+* valueNot (default: [""])
 
 
