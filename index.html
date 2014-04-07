@@ -360,6 +360,64 @@
 				</form>
 			</section>
 
+			<!-- Url -->
+			<section class="box">
+				<h1 class="box__header">Url Validation</h1>
+				<form role="form" class="from form-horizontal box__inner">
+					<div class="form-group">
+						<label class="control-label col-sm-3" for="inputUrl1">Url (default) *</label>
+						<div class="col-sm-9 has-feedback">
+							<input id="inputUrl1" class="form-control form-keeper" data-form-keeper='{"mandatory":{}, "url":{}}' value="www.google.de" />
+							<span class="glyphicon glyphicon-ok form-control-feedback icon-success"></span>
+							<span class="glyphicon glyphicon-remove form-control-feedback icon-error"></span>
+							<small>{"mandatory":{}, "url":{}}</small>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-3" for="inputUrl2">Url (ftp) *</label>
+						<div class="col-sm-9 has-feedback">
+							<input id="inputUrl2" class="form-control form-keeper" data-form-keeper='{"mandatory":{}, "url":{"protocols": ["ftp://", "ftps://"]}}' />
+							<span class="glyphicon glyphicon-ok form-control-feedback icon-success"></span>
+							<span class="glyphicon glyphicon-remove form-control-feedback icon-error"></span>
+							<small>{"mandatory":{}, "url":{"protocols": ["ftp://", "ftps://"]}}</small>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-3" for="inputUrl3">Url (get params not allowed) *</label>
+						<div class="col-sm-9 has-feedback">
+							<input id="inputUrl3" class="form-control form-keeper" data-form-keeper='{"mandatory":{}, "url":{"allowGet": false}}' value="http://www.google.de?q=jquery+formKeeper" />
+							<span class="glyphicon glyphicon-ok form-control-feedback icon-success"></span>
+							<span class="glyphicon glyphicon-remove form-control-feedback icon-error"></span>
+							<small>{"mandatory":{}, "url":{"allowGet": false}}</small>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-3" for="inputUrl4">Url (hash not allowed) *</label>
+						<div class="col-sm-9 has-feedback">
+							<input id="inputUrl4" class="form-control form-keeper" data-form-keeper='{"mandatory":{}, "url":{"allowHash": false}}' value="http://www.webapp.com/#!/search" />
+							<span class="glyphicon glyphicon-ok form-control-feedback icon-success"></span>
+							<span class="glyphicon glyphicon-remove form-control-feedback icon-error"></span>
+							<small>{"mandatory":{}, "url":{"allowHash": false}}</small>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-3" for="inputUrl6">Url (no protocol) *</label>
+						<div class="col-sm-9 has-feedback">
+							<input id="inputUrl6" class="form-control form-keeper" data-form-keeper='{"mandatory":{}, "url":{"protocols": [""]}}' value="www.google.com" />
+							<span class="glyphicon glyphicon-ok form-control-feedback icon-success"></span>
+							<span class="glyphicon glyphicon-remove form-control-feedback icon-error"></span>
+							<small>{"mandatory":{}, "url":{"protocols": [""]}}</small>
+						</div>
+					</div>
+					<div class="form-group form-group--submit">
+						<div class="col-sm-3">&nbsp;</div>
+						<div class="col-sm-9">
+							<button type="submit" class="btn btn-success">Validate</button>
+						</div>
+					</div>
+				</form>
+			</section>
+
 			<!-- Select -->
 			<section class="box">
 				<h1 class="box__header">Select Box Validation</h1>
@@ -420,6 +478,7 @@
 <script src="src/extensions/formkeeper.extension.select.js"></script>
 <script src="src/extensions/formkeeper.extension.time.js"></script>
 <script src="src/extensions/formkeeper.extension.pattern.js"></script>
+<script src="src/extensions/formkeeper.extension.url.js"></script>
 
 <!-- project -->
 <script src="src/project/script.js"></script>
