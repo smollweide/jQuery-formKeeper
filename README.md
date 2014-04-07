@@ -188,7 +188,7 @@ include script *after* "jquery.formkeeper.core.min.js"
 
 Usage:
 ```html
-<input class="form-keeper" data-form-keeper='{"pattern":{"regExp": "[a-z]*", "format": "a-z"}' />
+<input class="form-keeper" data-form-keeper='{"pattern":{"regExp": "[a-z]*"}' />
 ```
 
 Attributes:
