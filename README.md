@@ -160,6 +160,24 @@ Attributes:
 * format (default: "DD.MM.YYYY")("YYYY.MM.DD", "YYYY.M.D", "DD.MM.YYYY", "D.M.YYYY")
 * separator (default: ".")
 
+#Time Validation
+
+Installation:
+include script *after* "jquery.formkeeper.core.min.js"
+```html
+<script src="/path/to/jquery.formkeeper.extension.time.min.js"></script>
+```
+
+Usage:
+```html
+<input class="form-keeper" data-form-keeper='{"time":{}' />
+```
+
+Attributes:
+
+* format (default: "HH:mm")("HH:mm", "HH:mm:ss", "H:m", "H:m:s", "hh:mm", "hh:mm:ss", "h:m", "h:m:s", "x-x-x")
+* separator (default: ":")
+
 #Select Box Validation
 
 Installation:
