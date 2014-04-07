@@ -329,6 +329,37 @@
 				</form>
 			</section>
 
+			<!-- Pattern -->
+			<section class="box">
+				<h1 class="box__header">Pattern Validation</h1>
+				<form role="form" class="from form-horizontal box__inner">
+					<div class="form-group">
+						<label class="control-label col-sm-3" for="inputPattern1">Pattern (/[a-z]*/) *</label>
+						<div class="col-sm-9 has-feedback">
+							<input id="inputPattern1" class="form-control form-keeper" data-form-keeper='{"mandatory":{}, "pattern":{"regExp": "[a-z]*"}}' />
+							<span class="glyphicon glyphicon-ok form-control-feedback icon-success"></span>
+							<span class="glyphicon glyphicon-remove form-control-feedback icon-error"></span>
+							<small>{"mandatory":{}, "pattern":{"regExp": "[a-z]*"}}</small>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-3" for="inputPattern2">Pattern (/[a-z]*/i) *</label>
+						<div class="col-sm-9 has-feedback">
+							<input id="inputPattern2" class="form-control form-keeper" data-form-keeper='{"mandatory":{}, "pattern":{"regExp": "[a-z]*", "delimiter": "i"}}' />
+							<span class="glyphicon glyphicon-ok form-control-feedback icon-success"></span>
+							<span class="glyphicon glyphicon-remove form-control-feedback icon-error"></span>
+							<small>{"mandatory":{}, "pattern":{"regExp": "[a-z]*", "delimiter": "i""}}</small>
+						</div>
+					</div>
+					<div class="form-group form-group--submit">
+						<div class="col-sm-3">&nbsp;</div>
+						<div class="col-sm-9">
+							<button type="submit" class="btn btn-success">Validate</button>
+						</div>
+					</div>
+				</form>
+			</section>
+
 			<!-- Select -->
 			<section class="box">
 				<h1 class="box__header">Select Box Validation</h1>
@@ -388,6 +419,7 @@
 <script src="src/extensions/formkeeper.extension.date.js"></script>
 <script src="src/extensions/formkeeper.extension.select.js"></script>
 <script src="src/extensions/formkeeper.extension.time.js"></script>
+<script src="src/extensions/formkeeper.extension.pattern.js"></script>
 
 <!-- project -->
 <script src="src/project/script.js"></script>
