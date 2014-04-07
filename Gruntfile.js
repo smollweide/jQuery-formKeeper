@@ -97,6 +97,10 @@ module.exports = function(grunt) {
 			extensionDate: {
 				src: ['<%=dirs.extension%>/formkeeper.extension.date.js'],
 				dest: 'jquery.formkeeper.extension.date.min.js'
+			},
+			extensionSelect: {
+				src: ['<%=dirs.extension%>/formkeeper.extension.select.js'],
+				dest: 'jquery.formkeeper.extension.select.min.js'
 			}
 		}
 	});
