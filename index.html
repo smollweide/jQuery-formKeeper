@@ -270,10 +270,43 @@
 					</div>
 				</form>
 			</section>
+
+			<!-- Select -->
+			<section class="box">
+				<h1 class="box__header">Select Box Validation</h1>
+				<form role="form" class="from form-horizontal box__inner">
+					<div class="form-group">
+						<label class="control-label col-sm-3" for="inputSelect1">Select *</label>
+						<div class="col-sm-9 has-feedback">
+							<select id="inputSelect1" class="form-control form-keeper" data-form-keeper='{"select":{}}'>
+								<option value="">Please Select ...</option>
+								<option value="1">Item 1</option>
+								<option value="2">Item 2</option>
+							</select>
+							<small>{"select":{}}</small>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-3" for="inputSelect2">Select *</label>
+						<div class="col-sm-9 has-feedback">
+							<select id="inputSelect2" class="form-control form-keeper" data-form-keeper='{"select":{"valueNot":["", "1"]}}'>
+								<option value="">Please Select ...</option>
+								<option value="1">Item 1 (invalid)</option>
+								<option value="2">Item 2</option>
+							</select>
+							<small>{"select":{"valueNot":["", "1"]}}</small>
+						</div>
+					</div>
+					<div class="form-group form-group--submit">
+						<div class="col-sm-3">&nbsp;</div>
+						<div class="col-sm-9">
+							<button type="submit" class="btn btn-success">Validate</button>
+						</div>
+					</div>
+				</form>
+			</section>
 		</div>
 	</div>
-
-
 
 </div>
 
@@ -295,6 +328,7 @@
 <script src="src/extensions/formkeeper.extension.integer.js"></script>
 <script src="src/extensions/formkeeper.extension.number.js"></script>
 <script src="src/extensions/formkeeper.extension.date.js"></script>
+<script src="src/extensions/formkeeper.extension.select.js"></script>
 
 <!-- project -->
 <script src="src/project/script.js"></script>
