@@ -271,6 +271,64 @@
 				</form>
 			</section>
 
+			<!-- Time -->
+			<section class="box">
+				<h1 class="box__header">Time Validation</h1>
+				<form role="form" class="from form-horizontal box__inner">
+					<div class="form-group">
+						<label class="control-label col-sm-3" for="inputTime1">Time (HH:mm) *</label>
+						<div class="col-sm-9 has-feedback">
+							<input id="inputTime1" class="form-control form-keeper" data-form-keeper='{"mandatory":{}, "time":{}}' />
+							<span class="glyphicon glyphicon-ok form-control-feedback icon-success"></span>
+							<span class="glyphicon glyphicon-remove form-control-feedback icon-error"></span>
+							<small>{"mandatory":{}, "time":{}}</small>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-3" for="inputTime2">Time (HH:mm:ss) *</label>
+						<div class="col-sm-9 has-feedback">
+							<input id="inputTime2" class="form-control form-keeper" data-form-keeper='{"mandatory":{}, "time":{"format": "HH:mm:ss"}}' />
+							<span class="glyphicon glyphicon-ok form-control-feedback icon-success"></span>
+							<span class="glyphicon glyphicon-remove form-control-feedback icon-error"></span>
+							<small>{"mandatory":{}, "time":{"format": "HH:mm:ss"}}</small>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-3" for="inputTime3">Time (H:m:s) *</label>
+						<div class="col-sm-9 has-feedback">
+							<input id="inputTime3" class="form-control form-keeper" data-form-keeper='{"mandatory":{}, "time":{"format": "H:m:s"}}' />
+							<span class="glyphicon glyphicon-ok form-control-feedback icon-success"></span>
+							<span class="glyphicon glyphicon-remove form-control-feedback icon-error"></span>
+							<small>{"mandatory":{}, "time":{"format": "H:m:s"}}</small>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-3" for="inputTime4">Time (h:m) *</label>
+						<div class="col-sm-9 has-feedback">
+							<input id="inputTime4" class="form-control form-keeper" data-form-keeper='{"mandatory":{}, "time":{"format": "h:m"}}' />
+							<span class="glyphicon glyphicon-ok form-control-feedback icon-success"></span>
+							<span class="glyphicon glyphicon-remove form-control-feedback icon-error"></span>
+							<small>{"mandatory":{}, "time":{"format": "h:m"}}</small>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-3" for="inputTime5">Time (h-m) *</label>
+						<div class="col-sm-9 has-feedback">
+							<input id="inputTime5" class="form-control form-keeper" data-form-keeper='{"mandatory":{}, "time":{"format": "h-m", "separator": "-"}}' />
+							<span class="glyphicon glyphicon-ok form-control-feedback icon-success"></span>
+							<span class="glyphicon glyphicon-remove form-control-feedback icon-error"></span>
+							<small>{"mandatory":{}, "time":{"format": "h-m", "separator": "-"}}</small>
+						</div>
+					</div>
+					<div class="form-group form-group--submit">
+						<div class="col-sm-3">&nbsp;</div>
+						<div class="col-sm-9">
+							<button type="submit" class="btn btn-success">Validate</button>
+						</div>
+					</div>
+				</form>
+			</section>
+
 			<!-- Select -->
 			<section class="box">
 				<h1 class="box__header">Select Box Validation</h1>
@@ -329,6 +387,7 @@
 <script src="src/extensions/formkeeper.extension.number.js"></script>
 <script src="src/extensions/formkeeper.extension.date.js"></script>
 <script src="src/extensions/formkeeper.extension.select.js"></script>
+<script src="src/extensions/formkeeper.extension.time.js"></script>
 
 <!-- project -->
 <script src="src/project/script.js"></script>
