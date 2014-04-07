@@ -178,6 +178,24 @@ Attributes:
 * format (default: "HH:mm")("HH:mm", "HH:mm:ss", "H:m", "H:m:s", "hh:mm", "hh:mm:ss", "h:m", "h:m:s", "x-x-x")
 * separator (default: ":")
 
+#Pattern Validation
+
+Installation:
+include script *after* "jquery.formkeeper.core.min.js"
+```html
+<script src="/path/to/jquery.formkeeper.extension.pattern.min.js"></script>
+```
+
+Usage:
+```html
+<input class="form-keeper" data-form-keeper='{"pattern":{"regExp": "[a-z]*", "format": "a-z"}' />
+```
+
+Attributes:
+
+* regExp ({string} regExp)
+* delimiter (i|g|..)
+
 #Select Box Validation
 
 Installation:
