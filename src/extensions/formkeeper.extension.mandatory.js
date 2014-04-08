@@ -47,7 +47,7 @@
 		 * @method validateSelector
 		 *
 		 * @param {jQuery} $input
-		 * @returns {*}
+		 * @returns {{valid: boolean}}
 		 */
 		validateSelector: function ($input) {
 			var self = this,
@@ -66,7 +66,7 @@
 			}
 
 			if (type === 'radio') {
-				return {valid: true};
+				return { valid: true };
 			}
 
 			return self.validate($input.val());
@@ -91,6 +91,13 @@
 			};
 		},
 
+		/**
+		 *
+		 * @method validateCheckbox
+		 *
+		 * @param {jQuery} $input
+		 * @returns {{valid: boolean}}
+		 */
 		validateCheckbox: function ($input) {
 
 			if ($input.is(':checked')) {
