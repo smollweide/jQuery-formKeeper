@@ -196,6 +196,27 @@ Attributes:
 * regExp ({string} regExp)
 * delimiter (i|g|..)
 
+#Url Validation
+
+Installation:
+include script *after* "jquery.formkeeper.core.min.js"
+```html
+<script src="/path/to/jquery.formkeeper.extension.url.min.js"></script>
+```
+
+Usage:
+```html
+<input class="form-keeper" data-form-keeper='{"url":{}' />
+```
+
+Attributes:
+
+* protocols {array} (default ["http://", "https://"])
+* subDomains {array} (default ["www"])
+* suggestionDomain {string} (default "com")
+* allowHash {boolean} (default true)
+* allowGet {boolean} (default true)
+
 #Select Box Validation
 
 Installation:
