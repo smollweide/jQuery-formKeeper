@@ -109,6 +109,10 @@ module.exports = function(grunt) {
 			extensionPattern: {
 				src: ['<%=dirs.extension%>/formkeeper.extension.pattern.js'],
 				dest: 'jquery.formkeeper.extension.pattern.min.js'
+			},
+			extensionUrl: {
+				src: ['<%=dirs.extension%>/formkeeper.extension.url.js'],
+				dest: 'jquery.formkeeper.extension.url.min.js'
 			}
 		}
 	});
