@@ -452,6 +452,123 @@
 					</div>
 				</form>
 			</section>
+
+			<!-- Checkbox -->
+			<section class="box">
+				<h1 class="box__header">Checkbox Group Validation</h1>
+				<form role="form" class="from form-horizontal box__inner">
+					<div class="form-keeper form-keeper__checkbox--group" data-form-keeper='{"checkbox":{"min": 1}}'>
+						<div class="form-group">
+							<label class="control-label col-sm-3" for="inputCheckbox1">Checkbox 1</label>
+							<div class="col-sm-9">
+								<input id="inputCheckbox1" type="checkbox" />
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-label col-sm-3" for="inputCheckbox2">Checkbox 2</label>
+							<div class="col-sm-9">
+								<input id="inputCheckbox2" type="checkbox" />
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-label col-sm-3" for="inputCheckbox3">Checkbox 3</label>
+							<div class="col-sm-9">
+								<input id="inputCheckbox3" type="checkbox" />
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-sm-3">&nbsp;</div>
+							<div class="col-sm-9">
+								<small>{"checkbox":{"min": 1}}</small>
+							</div>
+						</div>
+					</div>
+					<div class="form-keeper form-keeper__checkbox--group" data-form-keeper='{"checkbox":{"max": 2}}'>
+						<div class="form-group">
+							<label class="control-label col-sm-3" for="inputCheckbox4">Checkbox 1</label>
+							<div class="col-sm-9">
+								<input id="inputCheckbox4" type="checkbox" />
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-label col-sm-3" for="inputCheckbox5">Checkbox 2</label>
+							<div class="col-sm-9">
+								<input id="inputCheckbox5" type="checkbox" />
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-label col-sm-3" for="inputCheckbox6">Checkbox 3</label>
+							<div class="col-sm-9">
+								<input id="inputCheckbox6" type="checkbox" />
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-sm-3">&nbsp;</div>
+							<div class="col-sm-9">
+								<small>{"checkbox":{"max": 2}}</small>
+							</div>
+						</div>
+					</div>
+					<div class="form-keeper form-keeper__checkbox--group" data-form-keeper='{"checkbox":{"exactly": 1}}'>
+						<div class="form-group">
+							<label class="control-label col-sm-3" for="inputCheckbox7">Checkbox 1</label>
+							<div class="col-sm-9">
+								<input id="inputCheckbox7" type="checkbox" />
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-label col-sm-3" for="inputCheckbox8">Checkbox 2</label>
+							<div class="col-sm-9">
+								<input id="inputCheckbox8" type="checkbox" />
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-label col-sm-3" for="inputCheckbox9">Checkbox 3</label>
+							<div class="col-sm-9">
+								<input id="inputCheckbox9" type="checkbox" />
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-sm-3">&nbsp;</div>
+							<div class="col-sm-9">
+								<small>{"checkbox":{"exactly": 1}}</small>
+							</div>
+						</div>
+					</div>
+					<div class="form-keeper form-keeper__checkbox--group" data-form-keeper='{"checkbox":{"min": 1, "max": 2}}'>
+						<div class="form-group">
+							<label class="control-label col-sm-3" for="inputCheckbox10">Checkbox 1</label>
+							<div class="col-sm-9">
+								<input id="inputCheckbox10" type="checkbox" />
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-label col-sm-3" for="inputCheckbox11">Checkbox 2</label>
+							<div class="col-sm-9">
+								<input id="inputCheckbox11" type="checkbox" />
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-label col-sm-3" for="inputCheckbox12">Checkbox 3</label>
+							<div class="col-sm-9">
+								<input id="inputCheckbox12" type="checkbox" />
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-sm-3">&nbsp;</div>
+							<div class="col-sm-9">
+								<small>{"checkbox":{"min": 1, "max": 2}}</small>
+							</div>
+						</div>
+					</div>
+					<div class="form-group form-group--submit">
+						<div class="col-sm-3">&nbsp;</div>
+						<div class="col-sm-9">
+							<button type="submit" class="btn btn-success">Validate</button>
+						</div>
+					</div>
+				</form>
+			</section>
 		</div>
 	</div>
 
@@ -479,6 +596,7 @@
 <script src="src/extensions/formkeeper.extension.time.js"></script>
 <script src="src/extensions/formkeeper.extension.pattern.js"></script>
 <script src="src/extensions/formkeeper.extension.url.js"></script>
+<script src="src/extensions/formkeeper.extension.checkbox.js"></script>
 
 <!-- project -->
 <script src="src/project/script.js"></script>
