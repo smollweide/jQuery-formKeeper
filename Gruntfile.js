@@ -113,6 +113,10 @@ module.exports = function(grunt) {
 			extensionUrl: {
 				src: ['<%=dirs.extension%>/formkeeper.extension.url.js'],
 				dest: 'jquery.formkeeper.extension.url.min.js'
+			},
+			extensionCheckbox: {
+				src: ['<%=dirs.extension%>/formkeeper.extension.checkbox.js'],
+				dest: 'jquery.formkeeper.extension.checkbox.min.js'
 			}
 		}
 	});
