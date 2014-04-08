@@ -63,9 +63,12 @@
 		bind: function (parent, $form) {
 			var selector = '[data-form-keeper*="\"checkbox\""]';
 
-			$form.off('change').on('change', selector + ' input[type="checkbox"]', function () {
-				parent.validateInput($(this).closest(selector));
-			});
+			$form
+				.off('change.formKeeper.checkbox')
+				.on('change.formKeeper.checkbox', selector + ' input[type="checkbox"]', function () {
+					parent.validateInput($(this).closest(selector));
+				})
+			;
 
 			return this;
 		},
