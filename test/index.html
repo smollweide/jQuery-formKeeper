@@ -2,15 +2,18 @@
 	<head>
 		<meta charset="utf-8">
 		<title>QUnit jQuery formKeeper</title>
-		<link rel="stylesheet" href="http://code.jquery.com/qunit/qunit-1.14.0.css">
+		<!--link rel="stylesheet" href="http://code.jquery.com/qunit/qunit-1.14.0.css"-->
+		<link rel="stylesheet" href="http://test/js/qunit-1.14.0.css">
 	</head>
 	<body>
 		<div id="qunit"></div>
 		<div id="qunit-fixture"></div>
 
 		<!-- base -->
-		<script src="//code.jquery.com/jquery-1.10.2.js"></script>
-		<script src="//code.jquery.com/qunit/qunit-1.14.0.js"></script>
+		<script src="//test/js/jquery-1.10.2.js"></script>
+		<script src="//test/js/qunit-1.14.0.js"></script>
+		<!--script src="//code.jquery.com/jquery-1.10.2.js"></script>
+		<script src="//code.jquery.com/qunit/qunit-1.14.0.js"></script-->
 		<script src="../src/base/javaScriptInheritance.js"></script>
 
 		<!-- core -->
@@ -30,6 +33,7 @@
 		<script src="../src/extensions/formkeeper.extension.time.js"></script>
 		<script src="../src/extensions/formkeeper.extension.pattern.js"></script>
 		<script src="../src/extensions/formkeeper.extension.url.js"></script>
+		<script src="../src/extensions/formkeeper.extension.checkbox.js"></script>
 
 		<!-- tests -->
 		<script src="tests/tests.formkeeper.utils.js"></script>
@@ -43,5 +47,6 @@
 		<script src="tests/tests.formkeeper.time.js"></script>
 		<script src="tests/tests.formkeeper.pattern.js"></script>
 		<script src="tests/tests.formkeeper.url.js"></script>
+		<script src="tests/tests.formkeeper.checkbox.js"></script>
 	</body>
 </html>
