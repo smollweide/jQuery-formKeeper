@@ -238,4 +238,27 @@ Attributes:
 
 * valueNot (default: [""])
 
+#Checkbox Group Validation
+
+Installation:
+include script *after* "jquery.formkeeper.core.min.js"
+```html
+<script src="/path/to/jquery.formkeeper.extension.checkbox.min.js"></script>
+```
+
+Usage:
+```html
+<div class="form-keeper form-keeper__checkbox--group" data-form-keeper='{"checkbox":{"min": 1}}'>
+	<label for="inputCheckbox1">Checkbox 1</label><input id="inputCheckbox1" type="checkbox" />
+	<label for="inputCheckbox2">Checkbox 2</label><input id="inputCheckbox2" type="checkbox" />
+	<label for="inputCheckbox3">Checkbox 3</label><input id="inputCheckbox3" type="checkbox" />
+</div>
+```
+
+Attributes:
+
+* min {number}
+* max {number}
+* exactly {number}
+
 
