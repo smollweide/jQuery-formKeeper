@@ -261,4 +261,21 @@ Attributes:
 * max {number}
 * exactly {number}
 
+#Radio Group Validation
+
+Installation:
+include script *after* "jquery.formkeeper.core.min.js"
+```html
+<script src="/path/to/jquery.formkeeper.extension.radio.min.js"></script>
+```
+
+Usage:
+```html
+<div class="form-keeper form-keeper__radio--group" data-form-keeper='{"radio":{}}'>
+	<label for="inputRadio1">Checkbox 1</label><input id="inputRadio1" name="inputRadio" type="radio" />
+	<label for="inputRadio2">Checkbox 2</label><input id="inputRadio2" name="inputRadio" type="radio" />
+	<label for="inputRadio3">Checkbox 3</label><input id="inputRadio3" name="inputRadio" type="radio" />
+</div>
+```
+
 
