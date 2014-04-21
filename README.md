@@ -278,6 +278,7 @@ Usage:
 </div>
 ```
 
+<<<<<<< HEAD
 #Sibling Validation
 
 Installation:
@@ -300,6 +301,8 @@ Attributes:
 * selector {string}
 * type {number} (default: "==")("equal", "==", "unequal", "!=", "greater", ">", "greaterEqual", ">=", "lower", "<", "lowerEqual", "<=")
 
+=======
+>>>>>>> FETCH_HEAD
 License
 =======
 
@@ -324,5 +327,8 @@ LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
 OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> FETCH_HEAD
 
