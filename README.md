@@ -317,8 +317,7 @@ include script *after* "jquery.formkeeper.core.min.js"
 
 Usage:
 ```html
-<input id="inputSibling1_1" class="form-control" value="Value 1" />
-<input id="inputSibling1_2" class="form-control form-keeper"  value="Value 2" data-form-keeper='{"##yourExtensionName##":{}}' />
+<input class="form-control form-keeper" data-form-keeper='{"##yourExtensionName##":{}}' />
 ```
 
 ```javascript
