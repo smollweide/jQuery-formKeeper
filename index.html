@@ -618,6 +618,127 @@
 					</div>
 				</form>
 			</section>
+
+			<!-- Sibling -->
+			<section class="box">
+				<h1 class="box__header">Sibling Validation</h1>
+				<form role="form" class="from form-horizontal box__inner">
+					<div class="form-group">
+						<label class="control-label col-sm-3" for="inputSibling1_1">Sibling (default equal) *</label>
+						<div class="col-sm-9 has-feedback">
+							<input id="inputSibling1_1" class="form-control" value="Value 1" />
+							<span class="glyphicon glyphicon-ok form-control-feedback icon-success"></span>
+							<span class="glyphicon glyphicon-remove form-control-feedback icon-error"></span>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-3" for="inputSibling1_2">&nbsp;</label>
+						<div class="col-sm-9 has-feedback">
+							<input id="inputSibling1_2" class="form-control form-keeper"  value="Value 2" data-form-keeper='{"mandatory":{}, "sibling":{"id":"inputSibling1_1"}}' />
+							<span class="glyphicon glyphicon-ok form-control-feedback icon-success"></span>
+							<span class="glyphicon glyphicon-remove form-control-feedback icon-error"></span>
+							<small>{"mandatory":{}, "sibling":{"id":"inputSibling1_1"}}</small>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="control-label col-sm-3" for="inputSibling2_1">Sibling (unequal) *</label>
+						<div class="col-sm-9 has-feedback">
+							<input id="inputSibling2_1" class="form-control" value="Value 1" />
+							<span class="glyphicon glyphicon-ok form-control-feedback icon-success"></span>
+							<span class="glyphicon glyphicon-remove form-control-feedback icon-error"></span>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-3" for="inputSibling2_2">&nbsp;</label>
+						<div class="col-sm-9 has-feedback">
+							<input id="inputSibling2_2" class="form-control form-keeper"  value="Value 1" data-form-keeper='{"mandatory":{}, "sibling":{"id":"inputSibling2_1", "type":"!="}}' />
+							<span class="glyphicon glyphicon-ok form-control-feedback icon-success"></span>
+							<span class="glyphicon glyphicon-remove form-control-feedback icon-error"></span>
+							<small>{"mandatory":{}, "sibling":{"id":"inputSibling2_1", "type":"!="}}</small>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="control-label col-sm-3" for="inputSibling3_1">Sibling (greater) *</label>
+						<div class="col-sm-9 has-feedback">
+							<input id="inputSibling3_1" class="form-control" value="Value 1" />
+							<span class="glyphicon glyphicon-ok form-control-feedback icon-success"></span>
+							<span class="glyphicon glyphicon-remove form-control-feedback icon-error"></span>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-3" for="inputSibling3_2">&nbsp;</label>
+						<div class="col-sm-9 has-feedback">
+							<input id="inputSibling3_2" class="form-control form-keeper"  value="Value 1" data-form-keeper='{"mandatory":{}, "sibling":{"id":"inputSibling3_1", "type":"greater"}}' />
+							<span class="glyphicon glyphicon-ok form-control-feedback icon-success"></span>
+							<span class="glyphicon glyphicon-remove form-control-feedback icon-error"></span>
+							<small>{"mandatory":{}, "sibling":{"id":"inputSibling3_1", "type":"greater"}}</small>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="control-label col-sm-3" for="inputSibling4_1">Sibling (greaterEqual) *</label>
+						<div class="col-sm-9 has-feedback">
+							<input id="inputSibling4_1" class="form-control" value="12" />
+							<span class="glyphicon glyphicon-ok form-control-feedback icon-success"></span>
+							<span class="glyphicon glyphicon-remove form-control-feedback icon-error"></span>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-3" for="inputSibling4_2">&nbsp;</label>
+						<div class="col-sm-9 has-feedback">
+							<input id="inputSibling4_2" class="form-control form-keeper"  value="11" data-form-keeper='{"mandatory":{}, "sibling":{"id":"inputSibling4_1", "type":">="}}' />
+							<span class="glyphicon glyphicon-ok form-control-feedback icon-success"></span>
+							<span class="glyphicon glyphicon-remove form-control-feedback icon-error"></span>
+							<small>{"mandatory":{}, "sibling":{"id":"inputSibling4_1", "type":">="}}</small>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="control-label col-sm-3" for="inputSibling5_1">Sibling (lower) *</label>
+						<div class="col-sm-9 has-feedback">
+							<input id="inputSibling5_1" class="form-control" value="12" />
+							<span class="glyphicon glyphicon-ok form-control-feedback icon-success"></span>
+							<span class="glyphicon glyphicon-remove form-control-feedback icon-error"></span>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-3" for="inputSibling5_2">&nbsp;</label>
+						<div class="col-sm-9 has-feedback">
+							<input id="inputSibling5_2" class="form-control form-keeper"  value="14" data-form-keeper='{"mandatory":{}, "sibling":{"id":"inputSibling5_1", "type":"<"}}' />
+							<span class="glyphicon glyphicon-ok form-control-feedback icon-success"></span>
+							<span class="glyphicon glyphicon-remove form-control-feedback icon-error"></span>
+							<small>{"mandatory":{}, "sibling":{"id":"inputSibling5_1", "type":"<"}}</small>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="control-label col-sm-3" for="inputSibling6_1">Sibling (lowerEqual) *</label>
+						<div class="col-sm-9 has-feedback">
+							<input id="inputSibling6_1" class="form-control" value="Value 1" />
+							<span class="glyphicon glyphicon-ok form-control-feedback icon-success"></span>
+							<span class="glyphicon glyphicon-remove form-control-feedback icon-error"></span>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-3" for="inputSibling6_2">&nbsp;</label>
+						<div class="col-sm-9 has-feedback">
+							<input id="inputSibling6_2" class="form-control form-keeper"  value="Value 2.1" data-form-keeper='{"mandatory":{}, "sibling":{"id":"inputSibling6_1", "type":"lowerEqual"}}' />
+							<span class="glyphicon glyphicon-ok form-control-feedback icon-success"></span>
+							<span class="glyphicon glyphicon-remove form-control-feedback icon-error"></span>
+							<small>{"mandatory":{}, "sibling":{"id":"inputSibling5_1", "type":"lowerEqual"}}</small>
+						</div>
+					</div>
+
+					<div class="form-group form-group--submit">
+						<div class="col-sm-3">&nbsp;</div>
+						<div class="col-sm-9">
+							<button type="submit" class="btn btn-success">Validate</button>
+						</div>
+					</div>
+				</form>
+			</section>
 		</div>
 	</div>
 
@@ -625,7 +746,6 @@
 
 <!-- base -->
 <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-<script src="src/base/javaScriptInheritance.js"></script>
 
 <!-- core -->
 <script src="jquery.formkeeper.core.min.js"></script>
@@ -643,6 +763,7 @@
 <script src="jquery.formkeeper.extension.url.min.js"></script>
 <script src="jquery.formkeeper.extension.checkbox.min.js"></script>
 <script src="jquery.formkeeper.extension.radio.min.js"></script>
+<script src="jquery.formkeeper.extension.sibling.min.js"></script>
 
 <!-- project -->
 <script src="src/project/script.js"></script>
