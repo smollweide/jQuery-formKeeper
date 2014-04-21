@@ -121,6 +121,10 @@ module.exports = function(grunt) {
 			extensionRadio: {
 				src: ['<%=dirs.extension%>/formkeeper.extension.radio.js'],
 				dest: 'jquery.formkeeper.extension.radio.min.js'
+			},
+			extensionSibling: {
+				src: ['<%=dirs.extension%>/formkeeper.extension.sibling.js'],
+				dest: 'jquery.formkeeper.extension.sibling.min.js'
 			}
 		}
 	});
