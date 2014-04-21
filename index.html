@@ -22,6 +22,28 @@
 	<div class="row">
 		<div class="col-md-12">
 
+			<!-- Custom Message -->
+			<section class="box">
+				<h1 class="box__header">Custom Message</h1>
+				<form role="form" class="from form-horizontal box__inner">
+					<div class="form-group">
+						<label class="control-label col-sm-3" for="inputCustomMessage1">Custom Message *</label>
+						<div class="col-sm-9 has-feedback">
+							<input id="inputCustomMessage1" class="form-control form-keeper" data-form-keeper='{"mandatory":{"customMessage":"customMessageText"}}' />
+							<span class="glyphicon glyphicon-ok form-control-feedback icon-success"></span>
+							<span class="glyphicon glyphicon-remove form-control-feedback icon-error"></span>
+							<small>{"mandatory":{"customMessage":"customMessageText"}}</small>
+						</div>
+					</div>
+					<div class="form-group form-group--submit">
+						<div class="col-sm-3">&nbsp;</div>
+						<div class="col-sm-9">
+							<button type="submit" class="btn btn-success">Validate</button>
+						</div>
+					</div>
+				</form>
+			</section>
+
 			<!-- Mandatory -->
 			<section class="box">
 				<h1 class="box__header">Mandatory Validation</h1>
