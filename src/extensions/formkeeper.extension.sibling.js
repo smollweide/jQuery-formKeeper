@@ -12,7 +12,7 @@
 	FormKeeper.Extension.Sibling = Class.extend({
 
 		errorMessage: {
-			default: 'Please select a Sibling.',
+			'default': 'Please select a Sibling.',
 			equal: 'This field have to be equal to it\'s sibling field',
 			unequal: 'This field have to be unequal to it\'s sibling field',
 			greater: 'This field have to be greater to it\'s sibling field',
@@ -330,20 +330,20 @@
 		findSibling: function ($input, data) {
 			var utils = this.utils;
 
-			if (!utils.isUndefined(data.name)) {
-				return $('name["'+ data.name +'"]');
+			if (!utils.isUndefined(data['name'])) {
+				return $('name["'+ data['name'] +'"]');
 			}
 
-			if (!utils.isUndefined(data.id)) {
-				return $('#' + data.id);
+			if (!utils.isUndefined(data['id'])) {
+				return $('#' + data['id']);
 			}
 
-			if (!utils.isUndefined(data.class)) {
-				return $('.' + data.class);
+			if (!utils.isUndefined(data['class'])) {
+				return $('.' + data['class']);
 			}
 
-			if (!utils.isUndefined(data.selector)) {
-				return $(data.selector);
+			if (!utils.isUndefined(data['selector'])) {
+				return $(data['selector']);
 			}
 
 			utils.console('warn', 'FormKeeper.Extension.Sibling.findSibling: ' +

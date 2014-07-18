@@ -26,7 +26,7 @@
 	FormKeeper.Extension.Time = Class.extend({
 
 		errorMessage: {
-			default: 'The value you entered must be in Format "{{format}}".'
+			'default': 'The value you entered must be in Format "{{format}}".'
 		},
 
 		defaults: {

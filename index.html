@@ -373,6 +373,15 @@
 							<small>{"mandatory":{}, "pattern":{"regExp": "[a-z]*", "delimiter": "i""}}</small>
 						</div>
 					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-3" for="inputPattern3">Pattern (/[a-z]*/i) *</label>
+						<div class="col-sm-9 has-feedback">
+							<input id="inputPattern3" class="form-control form-keeper" data-form-keeper='{"mandatory":{"customMessage": "Please enter a ZIP."}, "pattern": {"regExp":"\\d{5}|\\d{4}-\\d{5}", "customMessage": "Please enter in format XXXXX or XXXX-XXXXX"}}' />
+							<span class="glyphicon glyphicon-ok form-control-feedback icon-success"></span>
+							<span class="glyphicon glyphicon-remove form-control-feedback icon-error"></span>
+							<small>{"mandatory":{}, "pattern":{"regExp": "[a-z]*", "delimiter": "i""}}</small>
+						</div>
+					</div>
 					<div class="form-group form-group--submit">
 						<div class="col-sm-3">&nbsp;</div>
 						<div class="col-sm-9">
@@ -771,6 +780,13 @@
 
 <!-- core -->
 <script src="jquery.formkeeper.core.min.js"></script>
+<!--script src="src/base/javaScriptInheritance.js"></script>
+<script src="src/core/formkeeper.start.js"></script>
+<script src="src/core/formkeeper.config.js"></script>
+<script src="src/core/formkeeper.utils.js"></script>
+<script src="src/core/formkeeper.core.js"></script>
+<script src="src/core/jquery.formkeeper.js"></script-->
+
 
 <!-- extensions -->
 <script src="jquery.formkeeper.extension.mandatory.min.js"></script>
@@ -786,6 +802,7 @@
 <script src="jquery.formkeeper.extension.checkbox.min.js"></script>
 <script src="jquery.formkeeper.extension.radio.min.js"></script>
 <script src="jquery.formkeeper.extension.sibling.min.js"></script>
+
 
 <!-- project -->
 <script src="src/project/script.js"></script>

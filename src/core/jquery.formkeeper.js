@@ -27,14 +27,15 @@
 	$.fn.formKeeper = function (type, options) {
 
 		var $form = $(this),
-			formKeeper;
+			formKeeper,
+			emptyOptions = {};
 
 		if (type === 'typeahead') {
 
 			if (typeof(options) === 'object') {
 				formKeeper = new FormKeeper.Core($form, options);
 			} else {
-				formKeeper = new FormKeeper.Core($form, {});
+				formKeeper = new FormKeeper.Core($form, emptyOptions);
 			}
 
 			formKeeper

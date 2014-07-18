@@ -26,7 +26,7 @@
 	FormKeeper.Extension.Date = Class.extend({
 
 		errorMessage: {
-			default: 'The date you entered must be in Format "{{format}}".',
+			'default': 'The date you entered must be in Format "{{format}}".',
 			suggestion: ' Did you mean ' +
 				'<a data-form-keeper-suggestion="{{suggestion}}">{{suggestion}}</a>?'
 		},

@@ -28,7 +28,7 @@
 	FormKeeper.Extension.Select = Class.extend({
 
 		errorMessage: {
-			default: 'Please select a value.'
+			'default': 'Please select a value.'
 		},
 
 		defaults: {

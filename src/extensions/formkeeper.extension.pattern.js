@@ -26,7 +26,7 @@
 	FormKeeper.Extension.Pattern = Class.extend({
 
 		errorMessage: {
-			default: 'The value you entered must be in format /{{regExp}}/{{delimiter}}.'
+			'default': 'The value you entered must be in format /{{regExp}}/{{delimiter}}.'
 		},
 
 		defaults: {

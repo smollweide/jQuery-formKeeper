@@ -28,7 +28,7 @@
 	FormKeeper.Extension.Radio = Class.extend({
 
 		errorMessage: {
-			default: 'Please select a radio.'
+			'default': 'Please select a radio.'
 		},
 
 		/**

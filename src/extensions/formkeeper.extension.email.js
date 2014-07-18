@@ -26,7 +26,7 @@
 	FormKeeper.Extension.Email = Class.extend({
 
 		errorMessage: {
-			default: 'Please enter a valid email address'
+			'default': 'Please enter a valid email address'
 		},
 
 		/**

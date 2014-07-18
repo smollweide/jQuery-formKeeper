@@ -26,7 +26,7 @@
 	FormKeeper.Extension.Url = Class.extend({
 
 		errorMessage: {
-			default: 'The url you entered must be in a valid Format.',
+			'default': 'The url you entered must be in a valid Format.',
 			suggestion: ' Did you mean ' +
 				'<a data-form-keeper-suggestion="{{suggestion}}">{{suggestion}}</a>?'
 		},

@@ -29,7 +29,7 @@
 	FormKeeper.Extension.##newExtensionName## = Class.extend({
 
 		errorMessage: {
-			default: '##text##'
+			'default': '##text##'
 		},
 
 		/**

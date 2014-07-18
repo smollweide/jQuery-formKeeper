@@ -26,7 +26,7 @@
 	FormKeeper.Extension.Mandatory = Class.extend({
 
 		errorMessage: {
-			default: 'This field is mandatory'
+			'default': 'This field is mandatory'
 		},
 
 		/**

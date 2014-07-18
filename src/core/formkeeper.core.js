@@ -63,6 +63,11 @@
 			var self = this,
 				_class = 'input.' + self.options.classDefault + ', textarea.' + self.options.classDefault;
 
+			$(_class, self.$form).on('change' , function () {
+				var $input = $(this);
+				self.validateInputDefault($input);
+			});
+
 			self.$form
 				.on('blur.formKeeper', _class, function () {
 					self.validateInput($(this));
@@ -445,7 +450,8 @@
 				titleRaw = '';
 
 			if (self.utils.isUndefined(errorType)) {
-				titleRaw = extension.errorMessage.default;
+				titleRaw = extension.errorMessage['default'];
+
 			} else {
 				titleRaw = extension.errorMessage[errorType];
 			}
