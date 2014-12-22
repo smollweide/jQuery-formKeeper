@@ -62,7 +62,7 @@
 				isTextArea = (self.utils.isTagName($input, 'textarea'));
 
 			if (!isInput && !isTextArea) {
-				self.utils.console('warn', 'FormKeeper.Extension.Url.validateSelector: ' +
+				self.utils.console('warn', 'FormKeeper.Extension.Pattern.validateSelector: ' +
 					'the selector must be an input or textarea tag');
 				return true;
 			}

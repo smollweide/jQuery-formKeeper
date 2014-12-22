@@ -77,6 +77,7 @@
 		 * @param {string} data.exactly
 		 * @param {string} data.min
 		 * @param {string} data.max
+		 * @param {array} data.replace
 		 * @returns {{valid: boolean}}
 		 */
 		validate: function (value, data) {

@@ -264,6 +264,11 @@
 
 			$.each(data, function (key) {
 
+				if (key === 'replace') {
+					self.replaceInput($input, data.replace);
+					return this;
+				}
+
 				if (!self.utils.isValidExtension(key)) {
 					return true;
 				}
@@ -293,6 +298,19 @@
 
 			self.validateInputError($input, invalid_arr);
 			return invalid_arr;
+		},
+
+		/**
+		 *
+		 * @method replaceInput
+		 *
+		 * @param {jQuery} $input
+		 * @param {object} data
+		 * @returns {*}
+		 */
+		replaceInput: function ($input, data) {
+			$input.val(FormKeeper.Utils.processReplace($input.val(), data));
+			return this;
 		},
 
 		/**

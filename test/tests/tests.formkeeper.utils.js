@@ -208,4 +208,25 @@
 		strictEqual(utils.getSelectorIdentifier(_$textarea), 'note', '_$textarea = note');
 	});
 
+	test('FormKeeper.Utils.processReplace', function() {
+		strictEqual(utils.processReplace(
+			'12 12 12 12',
+			[[" ", ""]]),
+			'1212 12 12',
+			'replace simple'
+		);
+		strictEqual(utils.processReplace(
+			'12 12 12 12',
+			[{regExp:" ", delimiter:"g", replace:""}]),
+			'12121212',
+			'replace regExp'
+		);
+		strictEqual(utils.processReplace(
+			'123Test32523',
+			[{regExp:"[a-zA-Z]", delimiter:"g", replace:""}]),
+			'12332523',
+			'replace regExp 2'
+		);
+	});
+
 })(FormKeeper.$);

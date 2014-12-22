@@ -58,7 +58,7 @@
 			{ value: 6,					data: {min: 4, max: 5},		result: _resultFalse('range') },
 			{ value: 4,					data: {min: 4, max: 5},		result: _resultTrue },
 			{ value: _float,			data: {min: 4, max: 5},		result: _resultFalse('integer') },
-			{ value: _floatMinus,		data: {min: 4, max: 5},		result: _resultFalse('integer') }
+			{ value: _floatMinus,		data: {min: 4, max: 5},		result: _resultFalse('integer') },
 		],
 		_lengthArr2 = [
 			{ value: _string,			data: {},					result: _resultFalse('integer') },

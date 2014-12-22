@@ -346,6 +346,43 @@
 			}
 
 			return self.getUniqueId();
+		},
+
+		/**
+		 *
+		 * @method processReplace
+		 *
+		 * @param {string} value
+		 * @param {array} replaceArray
+		 * @returns {*}
+		 */
+		processReplace: function (value, replaceArray) {
+
+			var utils = FormKeeper.Utils,
+				reg;
+
+			if (!utils.isArray(replaceArray)) {
+				return value;
+			}
+
+			if (!utils.isString(value)) {
+				return value;
+			}
+
+			$.each(replaceArray, function () {
+				var item = this;
+
+				if (utils.isArray(this)) {
+					value = value.replace(item[0], item[1]);
+				} else if (utils.isObject(item)) {
+					reg = new RegExp(item.regExp, item.delimiter);
+
+					value = value.replace(reg, item.replace);
+				}
+
+			});
+
+			return value;
 		}
 	};
 
