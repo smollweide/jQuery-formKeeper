@@ -3,17 +3,49 @@
 		<meta charset="utf-8">
 		<title>QUnit jQuery formKeeper</title>
 		<!--link rel="stylesheet" href="http://code.jquery.com/qunit/qunit-1.14.0.css"-->
-		<link rel="stylesheet" href="./qunit/qunit-1.14.0.css">
+		<link rel="stylesheet" href="qunit/qunit-1.14.0.css">
 	</head>
 	<body>
 		<div id="qunit"></div>
 		<div id="qunit-fixture"></div>
 
+		<!-- Replace -->
+		<section class="box js-test-replace" style="display:none;">
+			<h1 class="box__header">Replace</h1>
+			<form role="form" class="from form-horizontal box__inner">
+				<div class="form-group">
+					<label class="control-label col-sm-3" for="inputReplace1">Replace Simple *</label>
+					<div class="col-sm-9 has-feedback">
+						<input name="inputReplace1" id="inputReplace1" class="form-control form-keeper js-test-replace-1" value="12Test12121212" data-form-keeper='{"replace":[["Test", ""]], "mandatory":{}, "length":{"max": 10}}' />
+						<span class="glyphicon glyphicon-ok form-control-feedback icon-success"></span>
+						<span class="glyphicon glyphicon-remove form-control-feedback icon-error"></span>
+						<small>{"replace":[["Test", ""]], "mandatory":{}, "length":{"max": 10}}</small>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="control-label col-sm-3" for="inputReplace2">Replace RegExp *</label>
+					<div class="col-sm-9 has-feedback">
+						<input name="inputReplace1" id="inputReplace2" class="form-control form-keeper js-test-replace-2" value="12 12 12 12 12" data-form-keeper='{"replace":[{"regExp": " ", "delimiter": "g", "replace": ""}], "mandatory":{}, "length":{"max": 10}}' />
+						<span class="glyphicon glyphicon-ok form-control-feedback icon-success"></span>
+						<span class="glyphicon glyphicon-remove form-control-feedback icon-error"></span>
+						<small>{"replace":[{"regExp": " ", "delimiter": "g", "replace": "", "mandatory":{}, "length":{"max": 10}}]]}</small>
+					</div>
+				</div>
+				<div class="form-group form-group--submit">
+					<div class="col-sm-3">&nbsp;</div>
+					<div class="col-sm-9">
+						<button type="submit" class="btn btn-success">Validate</button>
+					</div>
+				</div>
+			</form>
+		</section>
+
 		<!-- base -->
 		<!--script src="//code.jquery.com/jquery-1.10.2.js"></script>
 		<script src="//code.jquery.com/qunit/qunit-1.14.0.js"></script-->
-		<script src="../../../js/jquery-1.10.2.js"></script>
-		<script src="./qunit/qunit-1.14.0.js"></script>
+		<!--script src="//code.jquery.com/jquery-1.7.1.min.js"></script-->
+		<script src="//code.jquery.com/jquery-{{=jqueryVersion}}.min.js"></script>
+		<script src="qunit/qunit-1.14.0.js"></script>
 		<script src="../src/base/javaScriptInheritance.js"></script>
 
 		<!-- core -->
@@ -21,6 +53,7 @@
 		<script src="../src/core/formkeeper.config.js"></script>
 		<script src="../src/core/formkeeper.utils.js"></script>
 		<script src="../src/core/formkeeper.core.js"></script>
+		<script src="../src/core/jquery.formkeeper.js"></script>
 
 		<!-- extensions -->
 		<script src="../src/extensions/formkeeper.extension.mandatory.js"></script>
@@ -38,6 +71,7 @@
 		<script src="../src/extensions/formkeeper.extension.sibling.js"></script>
 
 		<!-- tests -->
+		<script src="tests/tests.formkeeper.core.js"></script>
 		<script src="tests/tests.formkeeper.utils.js"></script>
 		<script src="tests/tests.formkeeper.mandatory.js"></script>
 		<script src="tests/tests.formkeeper.email.js"></script>

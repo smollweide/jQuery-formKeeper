@@ -262,34 +262,29 @@
 				return invalid_arr;
 			}
 
-			$.each(data, function (key) {
+			for(var key in data) {
+				if(data.hasOwnProperty(key)) {
+					if (key === 'replace') {
+						self.replaceInput($input, data.replace);
+					} else if (self.utils.isValidExtension(key)) {
 
-				if (key === 'replace') {
-					self.replaceInput($input, data.replace);
-					return this;
+						var className = self.utils.capitalize(key),
+							extension = new FormKeeper.Extension[className](),
+							returnObject;
+
+						returnObject = extension.validateSelector($input);
+
+						if (self.utils.isObject(returnObject)) {
+							if (!returnObject.valid) {
+								invalid_arr.push({key:key, extension:extension, invalidObject:returnObject});
+							}
+						} else {
+							self.utils.console('warn', 'result of an validation must be an object like {"valid": true}');
+						}
+
+					}
 				}
-
-				if (!self.utils.isValidExtension(key)) {
-					return true;
-				}
-
-				var className = self.utils.capitalize(key),
-					extension = new FormKeeper.Extension[className](),
-					returnObject;
-
-				returnObject = extension.validateSelector($input);
-
-				if (!self.utils.isObject(returnObject)) {
-					self.utils.console('warn', 'result of an validation must be an object like {"valid": true}');
-					return true;
-				}
-
-				if (!returnObject.valid) {
-					invalid_arr.push({key:key, extension:extension, invalidObject:returnObject});
-				}
-
-				return true;
-			});
+			}
 
 			if (invalid_arr.length === 0) {
 				self.validateInputSuccess($input);
