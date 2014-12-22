@@ -125,6 +125,17 @@ module.exports = function(grunt) {
 			extensionSibling: {
 				src: ['<%=dirs.extension%>/formkeeper.extension.sibling.js'],
 				dest: 'jquery.formkeeper.extension.sibling.min.js'
+			},
+			extensionGooglePhoneNumbersLibrary: {
+				src: [
+					'src/core/google.libphonenumber.js',
+					'<%=dirs.extension%>/formkeeper.extension.google.phoneNumbers.js'
+				],
+				dest: 'jquery.formkeeper.extension.google.phoneNumbers.plusLibrary.min.js'
+			},
+			extensionGooglePhoneNumbers: {
+				src: ['<%=dirs.extension%>/formkeeper.extension.google.phoneNumbers.js'],
+				dest: 'jquery.formkeeper.extension.google.phoneNumbers.min.js'
 			}
 		}
 	});

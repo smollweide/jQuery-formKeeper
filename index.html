@@ -22,6 +22,59 @@
 	<div class="row">
 		<div class="col-md-12">
 
+			<!-- Google PhoneNumber -->
+			<section class="box">
+				<h1 class="box__header">Replace</h1>
+				<form role="form" class="from form-horizontal box__inner">
+					<div class="form-group">
+						<label class="control-label col-sm-3" for="inputReplace1">Replace Simple *</label>
+						<div class="col-sm-9 has-feedback">
+							<input name="inputReplace1" id="inputReplace1" class="form-control form-keeper" value="12Test12121212" data-form-keeper='{"replace":[["Test", ""]], "mandatory":{}, "length":{"max": 10}}' />
+							<span class="glyphicon glyphicon-ok form-control-feedback icon-success"></span>
+							<span class="glyphicon glyphicon-remove form-control-feedback icon-error"></span>
+							<small>{"replace":[["Test", ""]], "mandatory":{}, "length":{"max": 10}}</small>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-3" for="inputReplace2">Replace RegExp *</label>
+						<div class="col-sm-9 has-feedback">
+							<input name="inputReplace1" id="inputReplace2" class="form-control form-keeper" value="12 12 12 12 12" data-form-keeper='{"replace":[{"regExp": " ", "delimiter": "g", "replace": ""}], "mandatory":{}, "length":{"max": 10}}' />
+							<span class="glyphicon glyphicon-ok form-control-feedback icon-success"></span>
+							<span class="glyphicon glyphicon-remove form-control-feedback icon-error"></span>
+							<small>{"replace":[{"regExp": " ", "delimiter": "g", "replace": "", "mandatory":{}, "length":{"max": 10}}]]}</small>
+						</div>
+					</div>
+					<div class="form-group form-group--submit">
+						<div class="col-sm-3">&nbsp;</div>
+						<div class="col-sm-9">
+							<button type="submit" class="btn btn-success">Validate</button>
+						</div>
+					</div>
+				</form>
+			</section>
+
+			<!-- Google PhoneNumber -->
+			<section class="box">
+				<h1 class="box__header">Google PhoneNumber</h1>
+				<form role="form" class="from form-horizontal box__inner">
+					<div class="form-group">
+						<label class="control-label col-sm-3" for="inputGooglePhoneNumber1">Google PhoneNumber *</label>
+						<div class="col-sm-9 has-feedback">
+							<input name="inputGooglePhoneNumber1" id="inputGooglePhoneNumber1" class="form-control form-keeper" data-form-keeper='{"mandatory":{}, "googlePhoneNumber": {"country": "US"}}' />
+							<span class="glyphicon glyphicon-ok form-control-feedback icon-success"></span>
+							<span class="glyphicon glyphicon-remove form-control-feedback icon-error"></span>
+							<small>{"mandatory":{}, "googlePhoneNumber": {"country": "US"}}</small>
+						</div>
+					</div>
+					<div class="form-group form-group--submit">
+						<div class="col-sm-3">&nbsp;</div>
+						<div class="col-sm-9">
+							<button type="submit" class="btn btn-success">Validate</button>
+						</div>
+					</div>
+				</form>
+			</section>
+
 			<!-- Custom Message -->
 			<section class="box">
 				<h1 class="box__header">Custom Message</h1>
@@ -776,22 +829,24 @@
 </div>
 
 <!-- base -->
-<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+<!--script src="//code.jquery.com/jquery-1.10.2.js"></script-->
+<script src="../../js/jquery-1.10.2.js"></script>
 
 <!-- core -->
-<script src="jquery.formkeeper.core.min.js"></script>
-<!--script src="src/base/javaScriptInheritance.js"></script>
+<!--script src="jquery.formkeeper.core.min.js"></script-->
+<script src="src/base/javaScriptInheritance.js"></script>
 <script src="src/core/formkeeper.start.js"></script>
 <script src="src/core/formkeeper.config.js"></script>
 <script src="src/core/formkeeper.utils.js"></script>
 <script src="src/core/formkeeper.core.js"></script>
-<script src="src/core/jquery.formkeeper.js"></script-->
-
+<script src="src/core/jquery.formkeeper.js"></script>
+<script src="src/core/google.libphonenumber.js"></script>
 
 <!-- extensions -->
+<!--script src="src/core/google.libphonenumber.js"></script-->
 <script src="jquery.formkeeper.extension.mandatory.min.js"></script>
 <script src="jquery.formkeeper.extension.email.min.js"></script>
-<script src="jquery.formkeeper.extension.length.min.js"></script>
+<script src="src/extensions/formkeeper.extension.length.js"></script>
 <script src="jquery.formkeeper.extension.integer.min.js"></script>
 <script src="jquery.formkeeper.extension.number.min.js"></script>
 <script src="jquery.formkeeper.extension.date.min.js"></script>
@@ -802,6 +857,8 @@
 <script src="jquery.formkeeper.extension.checkbox.min.js"></script>
 <script src="jquery.formkeeper.extension.radio.min.js"></script>
 <script src="jquery.formkeeper.extension.sibling.min.js"></script>
+<!--script src="jquery.formkeeper.extension.google.phoneNumbers.min.js"></script-->
+<script src="src/extensions/formkeeper.extension.google.phoneNumbers.js"></script>
 
 
 <!-- project -->
